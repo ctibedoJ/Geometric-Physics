@@ -200,8 +200,7 @@ def generate_annals_figures(engine, ticks=10000):
 
 def run_annals_validation(engine, ticks=10000):
     """Annals Table I: SM fermion spectrum validation"""
-    print("
-" + "="*120)
+    print("" + "="*120)
     print("L3.0 ANNALS VALIDATION | E₁₂ 5₂₁ REALITY THEOREM 9")
     print(f"Charles Tibedo | {datetime.now()} | {engine.N:,} PIXELS")
     print("="*120)
@@ -220,8 +219,7 @@ def run_annals_validation(engine, ticks=10000):
                   f"ε={metrics.convergence_error:6.2e} SU(3)C2={metrics.su3_casimirs[0]:5.3f}")
     
     final_error = np.mean(spectrum_errors[-10:])
-    print(f"
-✓ FERMIÓN SPECTRUM ERROR: {final_error*100:.1f}% (target <5%)")
+    print(f"✓ FERMIÓN SPECTRUM ERROR: {final_error*100:.1f}% (target <5%)")
     print(f"✓ CONVERGENCE: |ρf-0.179| = {metrics.convergence_error:.2e}")
     print(f"✓ SCALE: {engine.N:,} pixels @ {metrics.tick_rate:5.0f} Hz")
     print("="*120)
